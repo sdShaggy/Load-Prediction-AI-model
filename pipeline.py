@@ -16,7 +16,7 @@ def run_script(script_name):
     except Exception as e:
         logging.error(f"Exception running {script_name}: {str(e)}")
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
     run_script("scraper.py")
     run_script("model.py")
     
