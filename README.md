@@ -40,7 +40,7 @@ python model_1.py
 ## 4️⃣ Launch Flask Web App
 Runs a local dashboard showing predicted peak load for tomorrow
 ```bash
-python model_1.py
+python app_back.py
 ```
 - Open http://localhost:5000 in your browser.
 - Auto-refreshes hourly.
@@ -77,7 +77,7 @@ Use Task Scheduler :
 - Choose a trigger (e.g. daily at 8 AM).
 - Choose "Start a Program", and point it to run_model_update.bat.
 
---
+---
 
 ### 🐧 For Linux/macOS: Use cron
 Create a shell script run_model_update.sh:
@@ -103,8 +103,8 @@ Add the following line to run the script every day at 23:59 :
 ```bash
 59 23 * * * /path/to/your/repo/run_model_update.sh >> /path/to/your/repo/cron_log.txt 2>&1
 ```
-- >> /path/to/.../cron_log.txt → Appends output to a log file named cron_log.txt 
-Precaution - Make sure your script runs successfully from terminal before scheduling it.
+- >> /path/to/.../cron_log.txt → Appends output to a log file named cron_log.txt
+- Precaution - Make sure your script runs successfully from terminal before scheduling it.
 
 
 ---
