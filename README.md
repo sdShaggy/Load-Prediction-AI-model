@@ -56,6 +56,59 @@ jupyter notebook predictor.ipynb
 
 ---
 
+## ⚙️ Optional Automation: Scheduled Retraining & Data Scraping :
+
+To keep your data up to date and retrain your model periodically, you can automate the following:
+
+### 1️⃣ Generate a .bat Script (for Windows) :
+Create a file named run_model_update.bat:
+```bash
+@echo off
+cd /d path\to\your\repo
+python scraper.py
+python model_1.py
+```
+🔁 Replace path\to\your\repo with your actual project directory path.
+
+### 2️⃣ Schedule It (Windows) :
+Use Task Scheduler :
+- Open Task Scheduler.
+- Create a Basic Task.
+- Choose a trigger (e.g. daily at 8 AM).
+- Choose "Start a Program", and point it to run_model_update.bat.
+
+--
+
+### 🐧 For Linux/macOS: Use cron
+Create a shell script run_model_update.sh:
+```bash
+#!/bin/bash
+cd /path/to/your/repo
+python3 scraper.py
+python3 model_1.py
+```
+✅ Replace /path/to/your/repo with the full path to your project directory.
+
+Make it executable:
+```bash
+chmod +x run_model_update.sh
+```
+
+Add a cron job:
+```bash
+crontab -e
+```
+
+Add the following line to run the script every day at 23:59 :
+```bash
+59 23 * * * /path/to/your/repo/run_model_update.sh >> /path/to/your/repo/cron_log.txt 2>&1
+```
+- >> /path/to/.../cron_log.txt → Appends output to a log file named cron_log.txt 
+Precaution - Make sure your script runs successfully from terminal before scheduling it.
+
+
+---
+
 ## 🧠 Model Details :
 
 ### Model Inputs :-
