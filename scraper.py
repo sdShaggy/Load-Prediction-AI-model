@@ -21,7 +21,7 @@ DELHI_LOC = Point(28.7041, 77.1025)
 
 options = Options()
 options.headless = True
-service = Service("C:/chromedriver-win64/chromedriver.exe")
+service = Service("C:/chromedriver-win64/chromedriver.exe")  # Path to chrome driver. 
 driver = webdriver.Chrome(service=service, options=options)
 
 def extract_peak_loads(date):
