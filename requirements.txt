@@ -1,0 +1,13 @@
+xgboost
+lightgbm
+optuna
+pandas
+numpy
+scikit-learn
+matplotlib
+openpyxl
+selenium
+bs4
+meteostat
+Flask
+xlsxwriter
