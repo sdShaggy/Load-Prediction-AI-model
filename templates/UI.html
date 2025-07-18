@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="3600">  
+    <title>Peak Load Forecast</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: #fff;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .date-today {
+            font-size: 16px;
+            color: #bbb;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            width: 90%;
+            max-width: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            color: #333;
+        }
+
+        .metric {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .label {
+            color: #666;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .metric {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Tomorrow's Peak Load Forecast – New Delhi</h1>
+            <div class="date-today">{{ today_date }}</div>
+        </div>
+
+        <div class="card">
+            <div class="metric">
+                <strong>{{predicted_load}}</strong> MW
+                <div class="label">Predicted Load for Tomorrow</div>
+            </div>
+
+            <div class="metric">
+                <strong>{{ rmse }}</strong> MW
+                <div class="label"> Relative RMSE <sup>*</sup></div>
+            </div>
+
+            <div class="metric">
+                <strong>{{ abs_error }}</strong> %
+                <div class="label">Error in Prediction</div> <!--Relative percentage error-->
+            </div>
+
+            <div class="metric">
+                <strong>{{ max_today }}</strong> MW
+                <div class="label">Today's Max Load</div>
+            </div>
+
+            <div class="metric">
+                <strong>{{ tomorrow_date }}</strong>
+                <div class="label">Forecast Date</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Made by Sarvagya Dwivedi & Team. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
