@@ -1,6 +1,8 @@
 # Load-Prediction-AI-model
 
-A comprehensive AI-based solution for **next-day electricity peak load prediction** in Delhi. This suite includes data scraping, preprocessing, advanced ML modeling, a live web dashboard (Flask), and detailed error visualization using Jupyter.
+A comprehensive AI-based solution for **next-day electricity peak load prediction** in Delhi. 
+
+This suite includes data scraping, preprocessing, advanced ML modeling, a live web dashboard (Flask), and detailed error visualization using Jupyter.
 
 ---
 
@@ -177,6 +179,21 @@ Add the following line to run the script every day at 23:59 :
 - meteostat
 - Flask
 - xlsxwriter
+
+---
+
+### 🙏 Acknowledgments :
+- Delhi SLDC – For providing the publicly available daily load curve data used in this project.
+- QPPStudio – For the holiday data source used in public holiday tagging.
+- Meteostat API – For weather data integration including temperature, wind speed, and precipitation.
+- XGBoost and LightGBM – Powerful gradient boosting libraries used for load forecasting.
+- Optuna – For hyperparameter tuning of models via intelligent trial search.
+- Flask – For serving predictions through a minimal web interface.
+- Jinja2 – For rendering dynamic HTML templates using Python data.
+- Selenium & BeautifulSoup – For robust web scraping of daily load curves and holiday data.
+- Pandas, NumPy, Matplotlib, Scikit-learn – Core Python libraries for data wrangling, visualization, and preprocessing.
+- Microsoft Excel – For local dataset versioning in .xlsx format.
+- Joblib – For serializing and loading model pipelines efficiently.
 
 ---
 
