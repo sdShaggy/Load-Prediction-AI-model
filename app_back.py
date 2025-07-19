@@ -51,6 +51,7 @@ def home():
     rel_rmse = (float(np.sqrt((pred_xgb - actual) ** 2)) / actual )
 
     today_str = datetime.now().strftime("%A, %d %b %Y")
+    
     tomorrow_str = (datetime.now() + timedelta(days=1)).strftime("%A, %d %b %Y")
 
     return render_template(
@@ -62,6 +63,6 @@ def home():
         abs_error=f"{rel_perc_error:.2f}",
         max_today=f"{max_today:.2f}"
     )
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
