@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-models = joblib.load('model_2.pkl')
+models = joblib.load('models/model_2.pkl')
 xgb_model = models['xgb']
 lgb_model = models['lgb']
 meta_model = models['meta']
@@ -66,3 +66,4 @@ def home():
     
 if __name__ == '__main__':
     app.run(debug=True)
+
