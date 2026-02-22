@@ -198,7 +198,7 @@ Add the following line to run the script every day at 23:59 :
 ---
 
 ## 👤 Author :
-This project was developed by Sarvagya Dwivedi and Team Load Logix AI as part of a personal learning initiative.
+This project was developed by Sarvagya Dwivedi and Team Load Logix AI for Smart India Hackathon '24 and Personal Learning Initiative.
 
 
 
