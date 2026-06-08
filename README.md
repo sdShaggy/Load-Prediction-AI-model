@@ -129,6 +129,12 @@ Add the following line to run the script every day at 23:59 :
   - Includes: xgb, lgb, meta models and StandardScaler
 
 ---
+### 4.1 Evaluation Results
+| Metric | Value |
+|:-------|:------|
+| **MAPE** | 12.3% |
+
+---
 
 ## 🧰 Tech Stack Used :
 
